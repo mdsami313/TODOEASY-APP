@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+{% block content %}
+<div class="container ad-todo-form">
+    <div class="row">
+      <form methods="POST">
+        <div class="row mb-3 lable-inp">
+          <label for="inputEmail3" class="col-sm-2 col-form-label reg-lb">Title</label>
+          <div class="col-sm-10">
+            <input type="Text" class="form-control" id="inputEmail3" name="title" value={{ todo.title }}>
+          </div>
+        </div>
+        <div class="row mb-3 lable-inp">
+          <label for="inputPassword3" class="col-sm-2 col-form-label reg-lb">Description</label>
+          <div class="col-sm-10">
+            <input type="Text" class="form-control" id="inputPassword3" name="desc" value={{ todo.desc }}>
+          </div>
+        </div>
+        <button type="submit" formmethod="POST" class="btn btn-primary add-btn">Edit</button>
+      </form>
+    </div>
+  </div>
+{% endblock content %}
+
+{% include 'footer.html' %}

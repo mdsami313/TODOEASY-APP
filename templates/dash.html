@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+    {% block content %}
+        <div class="fluid-container ttle">
+            <div class="d-img">
+                <div class="t-box">
+                    <h1 class="wel-note">Welcome To TODOEASY APP</h1>
+                    <div class="log-reg-txt">
+                        <h3>To Get Started,</h3>
+                    </div>
+                    <div class="log-reg-btn">
+                        <button formmethod="POST" onclick="location.href='/login'" type="button" class="btn btn-dark btn-sm log-btn">Login</button>
+                        <button formmethod="POST" onclick="location.href='/register'" type="button" class="btn btn-outline-dark btn-sm reg-btn">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock content %}
+
+{% include 'footer.html' %}

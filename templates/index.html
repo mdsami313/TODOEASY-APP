@@ -1,0 +1,82 @@
+{% include 'header.html' %}
+
+{% block body %}
+{% block content %}
+
+<div class="home-cont">
+  <h1 class="title">Add TODO's Here</h1>
+  
+  <div class="container ad-todo-form">
+    <div class="row">
+      <div class="flash">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+          <h3 class="msg">{{ message }}</h3>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+      </div>
+      <form methods="POST">
+        <div class="row mb-3 lable-inp">
+          <label for="inputEmail3" class="col-sm-2 col-form-label reg-lb">Title</label>
+          <div class="col-sm-10">
+            <input type="Text" class="form-control" id="inputEmail3" name="title">
+          </div>
+        </div>
+        <div class="row mb-3 lable-inp">
+          <label for="inputPassword3" class="col-sm-2 col-form-label reg-lb">Description</label>
+          <div class="col-sm-10">
+            <input type="Text" class="form-control" id="inputPassword3" name="desc">
+          </div>
+        </div>
+        <button type="submit" formmethod="POST" class="btn btn-primary add-btn">Add</button>
+      </form>
+    </div>
+  </div>
+  <div class="table-box">
+    <div class="container-fluid in-box">
+      <table class="table">
+        {% if todos | length != 0 %}
+        <thead>
+          <tr>
+            <th scope="col" class="col-cont">SNO</th>
+            <th scope="col" class="col-cont">Title</th>
+            <th scope="col" class="col-cont">Description</th>
+            <th scope="col" class="col-cont">Time</th>
+          </tr>
+        </thead>
+        {% else %}
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <h2>Add Your Todo's Here!</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        {% endif %}
+        {% if current_user.is_authenticated %}
+        <tbody>
+          {% for todo in todos %}
+          <tr>
+            <th scope="row" class="row-cont">{{ loop.index + pagination.skip}}</th>
+            <td class="row-cont">{{ todo.title }}</td>
+            <td class="row-cont">{{ todo.desc }}</td>
+            <td class="row-cont">{{ todo.time }}</td>
+            <td><a href="/edit/{{ todo.id }}" type="button" class="btn btn-success ed-del">Edit</button></td>
+            <td><a href="/delete/{{ todo.id }}" type="button" class="btn btn-danger ed-del">Delete</button></td>
+          </tr>
+          {% endfor %}
+        </tbody 
+        {% endif %}
+      </table>
+    </div>
+    <div class="pagination">
+      {{ pagination.links }}
+    </div>
+  </div>
+</div>
+{% endblock content %}
+{% endblock body %}
+
+{% include 'footer.html' %}

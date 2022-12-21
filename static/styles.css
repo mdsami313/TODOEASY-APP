@@ -1,0 +1,279 @@
+.container {
+    margin: 11em 0 0 12em;
+    padding-left: 12em;
+    padding-right: 27em;
+}
+
+body {
+    background-color: rgb(149 149 220);
+    color: rgb(69 74 74);
+    font-family: cursive;
+
+
+}
+
+#log{
+    /* margin-left: 16em; */
+    /* margin-bottom: -3em; */
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+
+}
+#reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.log-cont{
+    height: 100vh;
+    background-image: url(../static/images/dash2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-items: center;
+}
+.reg-cont{
+    height: 100vh;
+    background-image: url(../static/images/dash-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-items: center;
+}
+
+.log-reg-form{
+    background: white;
+    height: 25rem;
+    border-radius: 10px;
+    color: rgb(69 74 74);
+    padding-bottom: 17px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.lable-inp{
+    padding: 5px 0px;
+}
+
+.btn {
+    margin-left: 13em;
+    font-size: 22px;
+}
+
+#sign-in-btn{
+    margin-left: 14em;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.reg-lb{
+    font-size: 20px;
+}
+
+.b-colr{
+    background-color: #8842c9;
+}
+
+.app-name{
+    font-size: x-large;
+}
+
+.nav-link{
+    font-size: larger;
+    color: rgb(34 42 42);
+    font-weight: 600;
+}
+
+.title{
+    margin-left: 9em;
+    margin-bottom: -3em;
+    margin-top: 1em;
+}
+
+.ad-todo-form{
+    margin: 11em 0 0 11em;
+    padding-left: 12em;
+    padding-right: 27em;
+}
+
+.add-btn{
+    margin-left: 0;
+    font-size: 22px;
+    width: 100px;
+}
+
+.table-box{
+    background-color: white;
+    margin-top: 3rem;
+    padding: 0 20em;
+    width: 81rem;
+    height: 62rem;
+    margin-left: 7rem;
+    border-radius: 9px;
+    margin-bottom: 100px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.in-box{
+    width: 65rem;
+    height: 15rem;
+    position: relative;
+    right: 12rem;
+    padding-top: 1em;
+}
+
+.ed-del{
+    margin: 0;
+}
+
+thead tr .col-cont{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+tbody tr .row-cont{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.pagination{
+    position: relative;
+    /* top: 209vh; */
+    /* left: 49rem; */
+    justify-content: end;
+    top: 27em;
+}
+
+.flashes h3 {
+    color: #a42525;
+    font-style: italic;
+    /* margin-top: 4em; */
+    margin-bottom: 1rem;
+    margin-left: 3em;
+    font-size: x-large;
+}
+
+
+.d-img{
+    background-image: url("../static/images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.t-box {
+    width: 520px;
+    height: 100vh;
+    /* background-color: #d0b269; */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    top: -41px;
+    rotate: -10deg;
+    margin-right: 16rem;
+    right: 53px;
+}
+
+
+.wel-note {
+    color: black;
+    font-size: 49px;
+    padding: 193px 10px 0 111px;
+    line-height: 4.5rem;
+}
+
+.t-box h3 {
+    color: black;   
+    padding: 0px 10px 0 120px;
+    line-height: 2.5rem;
+}
+
+.log-reg-txt{
+    padding-top: 15px;
+}
+
+.log-btn{
+    margin-top: 10px;
+    margin-left: 8rem;
+}
+.reg-btn{
+    margin-top: 10px;
+    margin-left: 10px;
+    background: white;
+}
+
+.reg-btn:hover{
+    background-color: black;
+    
+}
+
+@media screen and (max-width:1000px )   {
+    
+    .t-box {
+        width: 520px;
+        height: 100vh;
+        /* background-color: #d0b269; */
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+        top: -104px;
+        rotate: -10deg;
+        margin-right: -2rem;
+        right: 53px;
+    }
+
+    .wel-note{
+        font-size: 39px;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .t-box{
+        background-color: white;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+        top: -41px;
+        rotate: 0deg;
+        margin-right: 0rem;
+        right: 0px;
+        border-radius: 10px;
+        width: 447px;
+        height: 453px;
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    }
+
+    .wel-note{
+        padding: 85px 0px 0 44px;
+
+    }
+
+    .log-reg-txt{
+        margin-left: -59px;
+    }
+
+    .log-reg-btn{
+        margin-left: -65px;
+    }
+}
